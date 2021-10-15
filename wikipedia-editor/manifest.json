@@ -1,0 +1,16 @@
+{
+  "name": "Wikipedia Editor",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Boilerplate extension for Todd's class",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "lib/jquery-1.11.1.min.js","inject.js"
+      ]
+    }
+  ]
+}
