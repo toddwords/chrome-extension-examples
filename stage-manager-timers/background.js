@@ -5,12 +5,12 @@
 
 var timeouts = [];
 var scriptRunning = false;
-
+runScript2()
 chrome.extension.onMessage.addListener(
   function(message, sender, sendResponse) {
   	if(message.toggleScript){
       if(!scriptRunning){
-        runScript()
+        runScript2()
       } else {
         resetScript()
       }
@@ -31,6 +31,14 @@ function runScript(){
   openNewWindow("https://www.youtube.com/watch?v=2vuaqDDr--Q", 28, 400,200, 300, 600)
   openNewWindow("https://www.youtube.com/watch?v=2vuaqDDr--Q", 29, 500,600, 400, 300)
   openNewWindow("https://www.youtube.com/watch?v=2vuaqDDr--Q", 31, 200,800, 300, 600)
+}
+function runScript2(){
+  openNewTab("https://toddwords.com", 0)
+  openNewTab("https://risd.edu", 5)
+  openNewWindow("https://www.youtube.com/watch?v=cOiT2mELfCY", 10)
+  openNewWindow("https://tacobell.com", 10, 500,0,500,400)
+  openNewWindow("https://yourworldoftext.com", 10, 500,500,500,400)
+  openNewWindow("https://softslow.com", 10, 0,500,500,400)
 }
 
 //these functions take in a url and a time in seconds
