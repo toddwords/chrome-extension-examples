@@ -1,0 +1,17 @@
+{
+  "name": "Overlay",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Puts a div over the page",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "lib/jquery-1.11.1.min.js","inject.js"
+      ]
+    }
+  ]
+}
